@@ -68,4 +68,12 @@ server.delete('/api/species/:id', (req, res) => {
   });
 });
 
+// more complicated endpoint -- two parameters
+server.get('/api/zoos/:zoo_id/animal_count/:animal_id', (req, res) => {
+  // SELECT COUNT(animal.id) FROM zoo_animals
+  // WHERE animal_id = animal_id AND zoo_id = zoo_id;
+  
+})
+
+
 module.exports = server;

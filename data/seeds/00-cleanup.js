@@ -5,4 +5,12 @@ exports.seed = function(knex) {
     mode: 'truncate', // resets ids
     ignoreTables: ['knex_migrations', 'knex_migrations_lock'], // don't empty migration tables
   });
+  // return knex
+  //   .truncate('zoom_animals', () => {
+  //     return knex.truncate('animals', () => {
+  //       return knex.truncate('species', () => {
+  //         return knex.truncate('zoos');
+  //       })
+  //     })
+  //   })
 };

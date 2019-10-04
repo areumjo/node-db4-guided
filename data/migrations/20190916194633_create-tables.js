@@ -7,7 +7,7 @@ exports.up = function(knex) {
     })
     .createTable('species', tbl => {
         tbl.increments();
-        tbl.string('species_name', 128).notNullable.unique();
+        tbl.string('species_name', 128).notNullable().unique();
     })
     .createTable('anmials', tbl => {
         tbl.increments();
@@ -18,7 +18,9 @@ exports.up = function(knex) {
             .notNullable()
             .references('id') 
             .inTable('species') // this table must exist
-    })
+            .onDelete('CASCADE')
+            .onUpdate('CASCADE');
+        })
     .createTable('zoo_animals', tbl => {
         tbl.integer('zoo_id')
             .unsigned() // integar should be positive

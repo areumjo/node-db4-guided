@@ -43,3 +43,9 @@ Tables: Animals, Species, Zoos
 `npm install knex sqlite3`
 `knex migrate:make create-tables`
 `knex migrate:make create-tables`
+
+`npm install sqlite3 --save`
+`npm run server`
+
+`knex migrate:latest`
+`knex seed:run`
